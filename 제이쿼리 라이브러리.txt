@@ -1,1 +1,2 @@
-code.jquery.com
+code.jquery.com 	// 제이쿼리 공식사이트
+api.jqueryui.com/easings 	// 제이쿼리 등속사이트 

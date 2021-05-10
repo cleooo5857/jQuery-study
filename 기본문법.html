@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js" integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>    
+    <script src="library/jquery-ui.min.js"></script>
+    <style>
+        .nav{
+            display: none;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background:chocolate;
+        }
+    </style>
+    <script>
+    
+    $(function(){
+        $('h1').css({'color':'red'});
+        $('#typo > .inner').css({
+        textDecoration:'underline',
+        borderBottom:'solid 5px red',
+    });
+    $('#typo,h1').mouseover(function(){
+            $(this).css({'background-color':'green'})
+            .mouseout(function(){
+                $(this).css({'background-color':'#3898db'});
+            });
+        })
+    $('#typo,h1').click(function(){
+        $(this).animate({'opacity':'0','font-size':'0'},2000,'easeInElastic'
+        ,function(){ 
+        $(this).animate({'opacity':'1','font-size':'50px'},1500).css({'background-color':'#fff'});
+    });  
+    });
+    $('.page-main > .nav > li').mouseover(function(){
+        $(this).css('background','red');
+    }).mouseout(function(){
+        $(this).css('background','#fff')
+    });
+    $('.page-main > .btn').click(function(){
+        $('.nav').css({'display':'block'});
+    });
+    $('.box').mouseover(function(){
+        $(this).stop().animate({'background-color':'blue'},500);
+    }).mouseout(function(){
+        $(this).stop().animate({'background-color':'green'},500);
+    });
+    });
+  
+    
+    </script>
+</head>
+<body>
+    <h1>creative jquery sample</h1>
+
+    <header>
+        <div class="page-main">
+            <button class="btn" value="네비게이션">버튼</button>
+            <div id="typo">
+                <div class="inner">creative jquery</div>
+            </div>
+            <ul class="nav">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+            </ul>
+            <div class="box"></div>
+        </div>
+        
+    </header>
+    
+</body>
+</html>

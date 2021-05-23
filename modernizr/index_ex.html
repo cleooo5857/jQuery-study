@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson  - Modernizr</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<style>
+		.demo-image{
+			-webkit-box-reflect: below;
+		}
+		.no-cssreflections .demo-image{
+			border-radius: 30px;
+		}
+		.cssreflections .alt-image{
+			display: none;
+		}
+		.no-cssreflections .alt-image{
+			display: block;
+			transform: matrix(1,0,0,-1,0,0);
+			position:relative;
+			top: -5px;
+		}
+	</style>
+	<script>
+		if (Modernizr.cssreflections) {
+		// supported
+		} else {
+		// not-supported
+		alert('당신의 브라우저는 css reflection 지원하지않는다')
+		}
+	</script>
+
+</head>
+<body>
+	<img src="./images/demo-image.jpg" alt="이미지1" class="demo-image">
+	<img src="./images/demo-image.jpg" alt="이미지1" class="alt-image">
+	<!-- Demo content -->
+
+
+</body>
+</html>

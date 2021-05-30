@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* 모든 페이지에 들어가는 공통서식 */
+
+
+@import url('https://rsms.me/inter/inter.css');
+	html { font-family: 'NotoKR','Malgun Gothic','gothic','고딕','새굴림',Arial,sans-serif;}
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Noto Sans','Malgun Gothic','gothic','고딕','새굴림',Arial,sans-serif; }
+}
+
+
+        
+body{
+	font-size:16px;
+	color:#333;
+    letter-spacing: -1px;
+}
+
+a{
+	text-decoration: none;
+	color:#333333;
+    
+}
+ 
+         

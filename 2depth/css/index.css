@@ -1,0 +1,87 @@
+html,body{
+    height: 100%;
+}
+header{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    background: #ccc;
+}
+
+header .container{
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.container > nav{
+    text-align: center;
+    width: 100%;
+}
+
+.container > nav > ul{
+    display: flex;
+    height: 100px;
+
+}
+
+.container > nav > ul > li{
+    width: 16%;
+    position: relative;
+    height: 100%;
+}
+
+.container > nav > ul > li > ul{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: violet;
+
+    display: none;
+}
+
+.container > nav > ul > li > ul > li{
+    padding: 0 10px;
+   
+}
+
+button{
+    position: absolute;
+    right: 20px;
+    top: 0;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+}
+
+.mobile-menu  span{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #333;
+}
+
+.mobile-menu span:nth-child(2){
+    top: 50%;
+}
+
+.mobile-menu span:last-child{
+    top: 100%;
+}
+
+section{
+    height: 100px;
+    background: violet;
+}
+.test{
+    background: yellowgreen;
+    height: 100%;
+}
